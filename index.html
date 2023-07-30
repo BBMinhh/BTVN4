@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <button onclick="play()">Start music</button>
+
+<script>
+      function play() {
+            startmusic();
+        }
+
+        function startmusic() {
+            var lyrics = [
+                
+                "That when I talk to you, oh, Cupid walks right through",
+                "And shoots an arrow through my heart",
+                "And I sound like a loon, but don't you feel it too?",
+                "Confess I loved you from the start",
+                "Confess I loved you",
+                "Just thinking of you",
+                "I know I've loved you from the start"
+                
+            ];
+            showAlert();
+            var interval = setInterval(function() {
+                if (index === lyrics.length) {
+                    clearInterval(interval);
+                } else {
+                    showAlert();
+                }
+            }, 1000);
+            var index = 0;
+            function showAlert() {
+                if (index < lyrics.length) {
+                    alert(lyrics[index]);
+                    index++;
+                }
+            }  
+        }  
+</script>
+</body>
+</html>
